@@ -1,1 +1,4 @@
 node_modules
+public/react/**
+public/js/**
+build/**
