@@ -1,7 +1,7 @@
 {
-  "name": "mobileView",
+  "name": "react-iso",
   "version": "1.0.0",
-  "description": "A simple implementation of progressively enhanced react component",
+  "description": "A basic template for a server rendered first react app with Express/Jade as base layout",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
