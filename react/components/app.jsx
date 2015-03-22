@@ -20,7 +20,7 @@ module.exports = React.createClass({
   // AJAX calls, etc
   handleClick: function() {
     this.setState({
-      items: this.state.items.concat('Item ' + this.state.items.length)
+      items: this.state.items.concat('Message ' + this.state.items.length)
     })
   },
 

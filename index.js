@@ -21,16 +21,19 @@ app.set('view engine', 'jade');
 // helper function for rendering a view with React
 function reactRender(res, componentClass, props) {
   var component = new componentClass(props);
-  res.render('index', { reactOutput: React.renderToString(component) });
+  res.render('index', { 
+    reactOutput: React.renderToString(component),
+    initialProps: JSON.stringify(props)
+  });
 }
 
 function reactApp(req, res) {
   reactRender(res, App, {
     items: [
+      'Message 0',
       'Message 1',
       'Message 2',
-      'Message 3',
-      'Message 4'
+      'Message 3'
     ]}
   );
 }
