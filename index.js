@@ -5,10 +5,8 @@ var bodyParser = require('body-parser');
 var path = require('path');
 var app = express();
 
-// setup server side react
-require('node-jsx').install({extension: '.jsx'});
 var React = require('react');
-App = React.createFactory(require('./react/components/app.jsx'));
+App = React.createFactory(require('./build/react/components/app.js'));
 
 var config = {
   port: 3000
@@ -23,7 +21,6 @@ app.set('view engine', 'jade');
 // helper function for rendering a view with React
 function reactRender(res, componentClass, props) {
   var component = new componentClass(props);
-  // res.render('index', { reactOutput: '' });
   res.render('index', { reactOutput: React.renderToString(component) });
 }
 
